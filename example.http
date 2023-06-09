@@ -1,0 +1,12 @@
+###
+
+POST http://localhost:3000/subscribers
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com"
+}
+
+###
+
+GET http://localhost:3000/subscribers
