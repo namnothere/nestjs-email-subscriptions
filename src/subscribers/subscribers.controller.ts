@@ -16,13 +16,21 @@ export default class SubscribersController implements OnModuleInit {
 
   @Get()
   async getSubscribers() {
-    console.log("Call Subscribers from client");
-    return this.gRpcService.GetAllSubscribers({});
+    try {
+      return this.gRpcService.GetAllSubscribers({});
+    } catch (err) {
+      console.log(err);
+      return err;
+    }
   }
 
   @Post()
   async createPost(@Body() subscriber: CreateSubscriberDto) {
-    return this.gRpcService.AddSubscriber(subscriber);
+    try {
+      return this.gRpcService.AddSubscriber(subscriber);
+    } catch (err) {
+      return err;
+    }
   }
   
 }

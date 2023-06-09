@@ -4,9 +4,21 @@ POST http://localhost:3000/subscribers
 Content-Type: application/json
 
 {
-    "email": "admin@gmail.com"
+    "email": "notadminlol5@gmail.com"
 }
+
 
 ###
 
 GET http://localhost:3000/subscribers
+
+###
+POST http://localhost:3000/kettles
+Content-Type: application/json
+
+{
+    "count": 10
+}
+
+###
+GET http://localhost:3000/kettles

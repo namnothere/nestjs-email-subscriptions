@@ -3,7 +3,7 @@ import { CreateSubscriberDto } from "./dto/createSubscriber.dto";
 
 interface SubscriberInterface {
     AddSubscriber(subscriber: CreateSubscriberDto): Promise<any>
-    GetAllSubscribers(params: {}): Promise<{data: any[]}>
+    GetAllSubscribers(params: {}): Promise<any>
 }
 
 export default SubscriberInterface;

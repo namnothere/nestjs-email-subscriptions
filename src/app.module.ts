@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { SubscribersModule } from './subscribers/subscribers.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
+import { KettlesModule } from './kettles/kettles.module';
 @Module({
   imports: [
     ConfigModule.forRoot({isGlobal: true}),
@@ -14,9 +15,10 @@ import { ConfigModule } from '@nestjs/config';
       password: 'EQJzKu9SlQ1C0E0m2NxsEWCWZ4gcN2vl',
       database: 'gyodqdjd',
       autoLoadEntities: true,
-      synchronize: true,
+      // synchronize: true,
     }),
-    SubscribersModule
+    SubscribersModule,
+    KettlesModule
   ],
   controllers: [
     AppController,
